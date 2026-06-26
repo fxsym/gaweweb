@@ -1,26 +1,33 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-bg: #F5F8F4;              /* Background hijau sangat muda */
+  --color-surface: #FFFFFF;         /* Surface putih */
+  --color-primary: #7A9E7E;         /* Sage Green */
+  --color-primary-hover: #68896B;   /* Sage lebih gelap */
+  --color-text: #1F2A21;            /* Hijau gelap */
+  --color-text-secondary: #5E6D60;  /* Abu kehijauan */
+  --color-accent: #A8C8A3;          /* Sage muda */
+  --color-border: #D8E4D5;          /* Border hijau pucat */
+  --color-footer: #4F6F52;          /* Hijau tua */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark Theme aktif ketika class .dark ada di <html> */
+html.dark {
+  --color-bg: #090b0a;              /* Background hijau gelap */
+  --color-surface: #243128;         /* Surface */
+  --color-primary: #8FB996;         /* Sage lebih terang */
+  --color-primary-hover: #A9D2AF;   /* Hover */
+  --color-text: #EDF5EE;            /* Putih kehijauan */
+  --color-text-secondary: #B9C7BB;  /* Abu terang */
+  --color-accent: #B7D8B1;          /* Accent */
+  --color-border: #3A4C3E;          /* Border */
+  --color-footer: #6E9F73;          /* Footer */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  @apply transition-all;
+  background: var(--color-bg);
+  color: var(--color-text);
   font-family: Arial, Helvetica, sans-serif;
 }
