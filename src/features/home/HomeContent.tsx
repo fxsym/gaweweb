@@ -3,6 +3,7 @@ import React from 'react'
 import HeroSection from './sections/HeroSection'
 import ServiceSection from './sections/ServiceSection'
 import ContactSection from './sections/ContactSection'
+import Footer from '@/components/Footer'
 
 export default function HomeContent() {
   return (
@@ -11,6 +12,7 @@ export default function HomeContent() {
       <HeroSection />
       <ServiceSection />
       <ContactSection />
+      <Footer />
     </div>
   )
 }
