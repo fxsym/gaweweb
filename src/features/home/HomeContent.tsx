@@ -2,6 +2,7 @@ import NavigationBar from '@/components/navigation/NavigationBar'
 import React from 'react'
 import HeroSection from './sections/HeroSection'
 import ServiceSection from './sections/ServiceSection'
+import ContactSection from './sections/ContactSection'
 
 export default function HomeContent() {
   return (
@@ -9,6 +10,7 @@ export default function HomeContent() {
       <NavigationBar />
       <HeroSection />
       <ServiceSection />
+      <ContactSection />
     </div>
   )
 }
